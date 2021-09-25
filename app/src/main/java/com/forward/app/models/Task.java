@@ -14,4 +14,10 @@ public class Task {
 
     public String name;
     public boolean complete;
+
+    public Task(int goalId, String name, boolean complete) {
+        this.goalId = goalId;
+        this.name = name;
+        this.complete = complete;
+    }
 }
