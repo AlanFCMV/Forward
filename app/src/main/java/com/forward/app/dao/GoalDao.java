@@ -19,7 +19,7 @@ public interface GoalDao {
 
     @Transaction
     @Query("SELECT * FROM goals WHERE id = :goalId")
-    List<GoalWithTasks> getGoalWithTasks(int goalId);
+    GoalWithTasks getGoalWithTasks(int goalId);
 
     @Insert
     void insertGoals(Goal... goals);
