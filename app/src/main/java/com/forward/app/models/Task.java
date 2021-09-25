@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "goals")
-public class Milestone {
+public class Task {
     @PrimaryKey(autoGenerate = true)
     public int id;
 
