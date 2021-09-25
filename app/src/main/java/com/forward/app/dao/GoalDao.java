@@ -15,18 +15,18 @@ import java.util.List;
 @Dao
 public interface GoalDao {
     @Query("SELECT * FROM goals")
-    public List<Goal> getAllGoals();
+    List<Goal> getAllGoals();
 
     @Transaction
     @Query("SELECT * FROM goals WHERE id = :goalId")
-    public List<GoalWithTasks> getGoalWithTasks(int goalId);
+    List<GoalWithTasks> getGoalWithTasks(int goalId);
 
     @Insert
-    public void insertAll(Goal... goals);
+    void insertGoals(Goal... goals);
 
     @Update
-    public void updateGoals(Goal... goals);
+    void updateGoals(Goal... goals);
 
     @Delete
-    public void deleteGoals(Goal... goals);
+    void deleteGoals(Goal... goals);
 }
