@@ -11,4 +11,10 @@ public class Goal {
     public String name;
     public String description;
     public boolean complete;
+
+    public Goal(String name, String description, boolean complete) {
+        this.name = name;
+        this.description = description;
+        this.complete = complete;
+    }
 }
