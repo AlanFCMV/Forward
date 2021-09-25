@@ -1,6 +1,7 @@
 package com.forward.app.models;
 
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
@@ -8,7 +9,17 @@ import com.forward.app.DateConverter;
 
 import java.util.Date;
 
-@Entity(tableName = "notifications")
+import static androidx.room.ForeignKey.CASCADE;
+
+@Entity(tableName = "notifications",
+        foreignKeys = @ForeignKey(
+                entity = Task.class,
+                parentColumns = "id",
+                childColumns = "taskId",
+                onDelete = CASCADE,
+                onUpdate = CASCADE
+        )
+)
 @TypeConverters(DateConverter.class)
 public class Notification {
     @PrimaryKey(autoGenerate = true)
