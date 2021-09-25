@@ -11,7 +11,7 @@ import static androidx.room.ForeignKey.CASCADE;
         foreignKeys = @ForeignKey(
                 entity = Goal.class,
                 parentColumns = "id",
-                childColumns = "goalId",
+                childColumns = "goal_id",
                 onDelete = CASCADE,
                 onUpdate = CASCADE
         )

@@ -9,7 +9,7 @@ public class GoalWithTasks {
     @Embedded public Goal goal;
     @Relation(
             parentColumn = "id",
-            entityColumn = "goalId"
+            entityColumn = "goal_id"
     )
     public List<Task> tasks;
 }
