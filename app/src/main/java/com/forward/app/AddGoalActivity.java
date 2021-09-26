@@ -142,6 +142,8 @@ public class AddGoalActivity extends AppCompatActivity {
             }
         }
 
+        goalDao.updateGoals(goal.goal);
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
