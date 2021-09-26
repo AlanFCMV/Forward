@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Forward</string>
+    <string name="add_first_goal">Add First Goal</string>
 </resources>
