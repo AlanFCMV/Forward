@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#141C1C"
-tools:context=".ViewGoalActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141C1C"
+    tools:context=".AddGoalActivity">
 
     <Button
-        android:id="@+id/create_goal_button2"
-        android:layout_width="69dp"
-        android:layout_height="53dp"
+        android:id="@+id/create_goal_button3"
+        android:layout_width="102dp"
+        android:layout_height="57dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Edit"
+        android:text="Delete"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:visibility="visible"
         app:backgroundTint="#207524"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/viewgoal_page_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-    android:id="@+id/viewgoal_page_icon"
-    android:layout_width="85dp"
-    android:layout_height="62dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginTop="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/w"
-    android:contentDescription="TODO" />
+        android:id="@+id/viewgoal_page_icon"
+        android:layout_width="85dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/w"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView2"
@@ -89,7 +89,8 @@ tools:context=".ViewGoalActivity">
         android:id="@+id/textView3"
         android:layout_width="340dp"
         android:layout_height="45dp"
-        android:background="#606060"
+        android:background="#FFFFFF"
+        android:text="Placeholder"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +104,8 @@ tools:context=".ViewGoalActivity">
         android:id="@+id/textView6"
         android:layout_width="340dp"
         android:layout_height="120dp"
-        android:background="#606060"
+        android:background="#FFFFFF"
+        android:text="Placeholder"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,9 +115,27 @@ tools:context=".ViewGoalActivity">
         app:layout_constraintVertical_bias="0.332"
         tools:ignore="TextContrastCheck" />
 
+    <Button
+        android:id="@+id/create_goal_button2"
+        android:layout_width="69dp"
+        android:layout_height="53dp"
+        android:text="OK"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:backgroundTint="#207524"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.948" />
+
     <ScrollView
-        android:layout_width="410dp"
-        android:layout_height="361dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="417dp"
+        android:layout_height="284dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,118 +143,125 @@ tools:context=".ViewGoalActivity">
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:id="@+id/viewgoal_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button15"
+            <TextView
+                android:id="@+id/textView0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button16"
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button17"
+            <TextView
+                android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button18"
+            <TextView
+                android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button19"
+            <TextView
+                android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button20"
+            <TextView
+                android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button21"
+            <TextView
+                android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button22"
+            <TextView
+                android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
 
-            <Button
-                android:id="@+id/button23"
+            <TextView
+                android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                app:backgroundTint="#606060" />
-
-            <Button
-                android:id="@+id/button24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
-                app:backgroundTint="#606060" />
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:textColorLink="#000000" />
         </LinearLayout>
     </ScrollView>
 
