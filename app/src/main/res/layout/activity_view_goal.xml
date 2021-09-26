@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#141C1C"
-tools:context=".ViewGoalActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141C1C"
+    tools:context=".ViewGoalActivity">
 
     <Button
-        android:id="@+id/create_goal_button2"
+        android:id="@+id/editGoalButton"
         android:layout_width="69dp"
         android:layout_height="53dp"
         android:layout_marginStart="16dp"
@@ -16,6 +16,7 @@ tools:context=".ViewGoalActivity">
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="editGoal"
         android:text="Edit"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
@@ -29,16 +30,16 @@ tools:context=".ViewGoalActivity">
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-    android:id="@+id/viewgoal_page_icon"
-    android:layout_width="85dp"
-    android:layout_height="62dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginTop="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/w"
-    android:contentDescription="TODO" />
+        android:id="@+id/viewgoal_page_icon"
+        android:layout_width="85dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/w" />
 
     <TextView
         android:id="@+id/textView2"
@@ -86,7 +87,7 @@ tools:context=".ViewGoalActivity">
         app:layout_constraintVertical_bias="0.222" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/viewGoalName"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="#606060"
@@ -100,7 +101,7 @@ tools:context=".ViewGoalActivity">
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/viewGoalDescription"
         android:layout_width="340dp"
         android:layout_height="120dp"
         android:background="#606060"
@@ -113,9 +114,23 @@ tools:context=".ViewGoalActivity">
         app:layout_constraintVertical_bias="0.332"
         tools:ignore="TextContrastCheck" />
 
+    <Button
+        android:id="@+id/complete_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:clickable="false"
+        android:onClick="toggleGoal"
+        android:text="Complete Goal"
+        app:backgroundTint="#606060"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
-        android:layout_width="410dp"
-        android:layout_height="361dp"
+        android:layout_width="412dp"
+        android:layout_height="274dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +138,7 @@ tools:context=".ViewGoalActivity">
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:id="@+id/viewgoal_layout"
+            android:id="@+id/viewTasksLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -136,6 +151,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -147,6 +163,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -158,6 +175,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -169,6 +187,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -180,6 +199,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -191,6 +211,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -202,6 +223,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -213,6 +235,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -224,6 +247,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060" />
 
             <Button
@@ -234,6 +258,7 @@ tools:context=".ViewGoalActivity">
                 android:layout_marginLeft="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:onClick="toggleTask"
                 app:backgroundTint="#606060" />
         </LinearLayout>
     </ScrollView>
